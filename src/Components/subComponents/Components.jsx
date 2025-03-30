@@ -20,11 +20,11 @@ import PHP_i from "../../assets/media/images/php_i.png";
 import Vite from "../../assets/media/images/devicon--vitejs.png";
 import jQuery from "../../assets/media/images/devicon--jquery.png";
 import Sass from "../../assets/media/images/logos--sass.png";
-import ProfileImage from "../../assets/media/images/Okeleye_Victor_Olamide_Profile_Image.jpg";
-import NGN from "../../assets/media/images/nigeria.png";
+import ProfileImage from "../../assets/media/images/Adeniyi_Richard_Profile_Image.jpg";
+import NGN from "../../assets/media/images/canada.png";
 
 // import cv from "../../assets/media/documents/OKELEYE_VICTOR_CV.pdf";
-const cv = "https://drive.google.com/file/d/1PbU-AsJsQE5X4pM9_j8jr6WnKLT6ObL-/view?usp=sharing";
+const cv = "https://drive.google.com/file/d/1ADPYetNeQ5vvdH22NLQ-EQML-ETChdWZ/view?usp=sharing";
 
 // project images
 import resumeMe from "../../assets/media/images/resume-me.png";
