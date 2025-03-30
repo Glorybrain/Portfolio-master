@@ -89,7 +89,7 @@ export const BannerComponent = () => {
               Adeniyi Richard Adedokun.
             </h4>
             <span className="text-[.89rem] font-light opacity-70 text-[#222222] dark:text-white">
-              I am a Software Engineer based in Lagos, Nigeria.
+              I am a Software Engineer based in Winnipeg, Canada.
             </span>
             <ul className="flex items-center gap-x-2 mt-4">
               {memoizedSocialMedia.map((social, key) => (
