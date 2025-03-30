@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+	font-family: THIS-IS-VICKKK_S FONT;
+	src: url("./assets/fonts/BricolageGrotesque_wght.ttf") format("truetype");
+}
+* {
+	font-family: THIS-IS-VICKKK_S FONT;
+	transition: 300ms linear;
+}
+input[type="email"]:not(:placeholder-shown):user-invalid {
+	@apply border-red-300;
+}
+input[type="email"]:not(:placeholder-shown):user-valid {
+	@apply border-green-700;
+}
+body:has(.active) {
+	overflow: hidden;
+}
+body::-webkit-scrollbar {
+	display: none;
+}
+.text-one,
+.text-two {
+	animation: colorize 1s ease-in-out infinite alternate;
+	mix-blend-mode: difference;
+}
+@keyframes colorize {
+	0% {
+		color: rgb(106, 106, 106);
+	}
+	100% {
+		color: white;
+	}
+}
+.animate-in {
+	animation: animateIn 150ms ease-in-out forwards;
+}
+.animate-out {
+	animation: animateOut 150ms ease-in-out forwards;
+}
+@keyframes animateIn {
+	from {
+		transform: scale(0.95);
+		opacity: 0.2;
+	}
+	to {
+		transform: scale(1);
+		opacity: 1;
+	}
+}
+@keyframes animateOut {
+	to {
+		transform: scale(0.95);
+		opacity: 0;
+	}
+}
+
+.text-wrap {
+	text-wrap: balance;
+}
+._::after {
+	background-image: inherit;
+}
