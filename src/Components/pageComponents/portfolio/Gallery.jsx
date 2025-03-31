@@ -16,7 +16,7 @@ export default function GalleryComponent() {
   return (
     <section>
       <header className="pb-5 border-b border-b-zinc-300 dark:border-b-zinc-800 mb-7">
-        <h3 className="text-xl lg:text-lg text-[#222222] dark:text-white">Project Gallery</h3>
+        <h3 className="text-xl lg:text-lg text-[#222222] dark:text-white">Gallery</h3>
       </header>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
