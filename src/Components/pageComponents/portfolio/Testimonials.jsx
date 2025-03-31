@@ -19,7 +19,7 @@ const TestimonialComponent = () => {
   return (
     <div className="mx-auto ">
       <motion.header
-        className="flex align-middle justify-between pb-5 border-b border-b-zinc-300 dark:border-b-zinc-800 mb-7"
+        className="flex mt-2 align-middle justify-between pb-5 border-b border-b-zinc-300 dark:border-b-zinc-800 mb-7"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, ease: "easeOut" }}
