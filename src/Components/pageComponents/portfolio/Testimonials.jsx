@@ -32,14 +32,14 @@ const TestimonialComponent = () => {
             onClick={prevTestimonial}
             className="p-1 bg-gray-100 dark:bg-zinc-800 rounded-full shadow-md hover:bg-gray-200 dark:hover:bg-zinc-700"
           >
-            <ChevronLeft className="text-gray-600 dark:text-white" size={20} />
+            <ChevronLeft className="text-gray-800 dark:text-white" size={20} />
           </button>
 
           <button
             onClick={nextTestimonial}
             className="p-1 bg-gray-100 dark:bg-zinc-800 rounded-full shadow-md hover:bg-gray-200 dark:hover:bg-zinc-700"
           >
-            <ChevronRight className="text-gray-600 dark:text-white" size={20} />
+            <ChevronRight className="text-gray-800 dark:text-white" size={20} />
           </button>
         </div>
       </motion.header>

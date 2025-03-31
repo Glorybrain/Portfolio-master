@@ -10,7 +10,6 @@
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
-    "@splidejs/react-splide": "^0.7.12",
     "aos": "^2.3.4",
     "framer-motion": "^10.12.17",
     "lucide-react": "^0.485.0",
