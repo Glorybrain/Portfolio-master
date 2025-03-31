@@ -9,7 +9,6 @@ export const TechnologiesComponent = () => {
       viewport={{ once: true, amount: 0.2 }}
       transition={{ staggerChildren: 0.15 }}
     >
-      {/* Section Header */}
       <motion.header 
         className="pb-5 border-b border-b-zinc-300 dark:border-b-zinc-800 mb-7"
         initial={{ opacity: 0, y: 20 }}
@@ -21,7 +20,6 @@ export const TechnologiesComponent = () => {
         </h3>
       </motion.header>
 
-      {/* Technology Grid */}
       <div className="grid grid-cols-3 md:grid-cols-5 gap-7 text-center place-content-center justify-center">
         {MyStacks.map((eachStack, index) => {
           const { name, image } = eachStack;

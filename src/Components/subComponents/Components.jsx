@@ -60,7 +60,7 @@ export const socialMedia = [
 		otherName: "LinkedIn",
 	},
 	{
-		link: "https://x.com/o_vickkk",
+    link: "https://x.com/favouritecapguy",
 		linkname: "Twitter/X",
 		icon: "fa6-brands:x-twitter",
 		otherName: "Twitter/X",
@@ -318,29 +318,25 @@ export const Testimonials = [
 
 export const Certificates = [
   {
-    title: "React Developer Certification",
-    issuer: "Meta (Coursera)",
+    title: "Fullstack Web Development",
+    issuer: "Coursera",
     date: "March 2025",
-    link: "https://coursera.org/verify/react-cert",
-    image: "/images/react-cert.png",
-  },
-  {
-    title: "React Developer Certification",
-    issuer: "Meta (Coursera)",
-    date: "March 2025",
-    link: "https://coursera.org/verify/react-cert",
-    image: "/images/react-cert.png",
+    imageSrc: resumeMe,
+    link: "https://drive.google.com/fullstack-cert",
   },
   {
     title: "JavaScript Algorithms & Data Structures",
     issuer: "freeCodeCamp",
     date: "February 2025",
-    link: "https://freecodecamp.org/certification/js-algo",
-    image: "/images/js-cert.png",
+    imageSrc: pggtarians,
+    link: "https://drive.google.com/js-cert",
   },
   {
-    title: "Frontend Developer Nanodegree",
-    issuer: "Udacity",
+    title: "AWS Certified Developer – Associate",
+    issuer: "Amazon Web Services",
     date: "January 2025",
+    imageSrc: getLinkedAI,
+    link: "https://drive.google.com/aws-cert",
   },
 ];
+

@@ -20,7 +20,7 @@ const Main = () => {
 				<ProjectsComponent />
 				<GalleryComponent />
         <TestimonialComponent />
-        {/* <CertificatesComponent /> */}
+        <CertificatesComponent />
 			</section>
 		</div>
 	);
