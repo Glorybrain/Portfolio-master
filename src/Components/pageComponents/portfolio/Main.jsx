@@ -6,6 +6,7 @@ import { ProjectsComponent } from "./Projects";
 import GalleryComponent from "./Gallery";
 import Header from "../../subComponents/Header";
 import TestimonialComponent from "./Testimonials";
+import CertificatesComponent from "./Certificates";
 
 const Main = () => {
 	return (
@@ -19,6 +20,7 @@ const Main = () => {
 				<ProjectsComponent />
 				<GalleryComponent />
         <TestimonialComponent />
+        {/* <CertificatesComponent /> */}
 			</section>
 		</div>
 	);

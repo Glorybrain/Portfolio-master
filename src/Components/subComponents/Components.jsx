@@ -315,3 +315,32 @@ export const Testimonials = [
     image: ProfileImage,
   },
 ];
+
+export const Certificates = [
+  {
+    title: "React Developer Certification",
+    issuer: "Meta (Coursera)",
+    date: "March 2025",
+    link: "https://coursera.org/verify/react-cert",
+    image: "/images/react-cert.png",
+  },
+  {
+    title: "React Developer Certification",
+    issuer: "Meta (Coursera)",
+    date: "March 2025",
+    link: "https://coursera.org/verify/react-cert",
+    image: "/images/react-cert.png",
+  },
+  {
+    title: "JavaScript Algorithms & Data Structures",
+    issuer: "freeCodeCamp",
+    date: "February 2025",
+    link: "https://freecodecamp.org/certification/js-algo",
+    image: "/images/js-cert.png",
+  },
+  {
+    title: "Frontend Developer Nanodegree",
+    issuer: "Udacity",
+    date: "January 2025",
+  },
+];
