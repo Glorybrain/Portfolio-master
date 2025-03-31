@@ -35,7 +35,7 @@ const SideBar = () => {
     <aside className="h-full lg:border-r lg:border-solid flex flex-col gap-y-1 border-r-zinc-300 dark:border-r-zinc-700 bg-[#F2F2F2] dark:bg-custom">
       <div className="px-5 pt-4 flex items-center justify-between">
         <h2 className="text-[#222222] dark:text-white text-2xl font-bold opacity-80 tracking-wide">
-          Vickkk
+          Richard 
         </h2>
         <button
           type="button"

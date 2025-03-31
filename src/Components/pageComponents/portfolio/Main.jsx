@@ -18,7 +18,7 @@ const Main = () => {
 				<TechnologiesComponent />
 				<ProjectsComponent />
 				<GalleryComponent />
-        {/* <TestimonialComponent /> */}
+        <TestimonialComponent />
 			</section>
 		</div>
 	);

@@ -6,7 +6,7 @@ export default function ImageModal({ isOpen, onClose, mediaSrc, mediaType, title
     <AnimatePresence>
       {isOpen && (
         <motion.div
-          className="fixed inset-0 bg-black backdrop-blur-md bg-opacity-70 flex items-center justify-center z-5"
+          className="fixed inset-0 bg-black backdrop-blur-md bg-opacity-70 flex items-center justify-center z-10"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}

@@ -6,14 +6,6 @@ import { Testimonials } from "../../subComponents/Components";
 const TestimonialComponent = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  // Auto-scroll every 5 seconds
-  useEffect(() => {
-    const interval = setInterval(() => {
-      nextTestimonial();
-    }, 5000);
-    return () => clearInterval(interval);
-  }, [currentIndex]);
-
   const nextTestimonial = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % Testimonials.length);
   };
@@ -25,107 +17,64 @@ const TestimonialComponent = () => {
   };
 
   return (
-    <div className="max-w-3xl mx-auto p-6 relative ">
-      <motion.div
-        key={currentIndex}
-        initial={{ opacity: 0, y: 10 }}
+    <div className="mx-auto ">
+      <motion.header
+        className="flex align-middle justify-between pb-5 border-b border-b-zinc-300 dark:border-b-zinc-800 mb-7"
+        initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        exit={{ opacity: 0, y: -10 }}
-        transition={{ duration: 0.5 }}
-        className="bg-white shadow-lg rounded-2xl p-6 text-center "
+        transition={{ duration: 0.5, ease: "easeOut" }}
       >
-        <p className="text-gray-600 italic mb-4">
-          "{Testimonials[currentIndex].testimonial}"
-        </p>
-        <div className="flex flex-col items-center">
-          {Testimonials[currentIndex].image && (
-            <img
-              src={Testimonials[currentIndex].image}
-              alt={Testimonials[currentIndex].name}
-              className="w-16 h-16 rounded-full object-cover mb-2"
-            />
-          )}
-          <h4 className="font-semibold text-lg">{Testimonials[currentIndex].name}</h4>
-          <p className="text-sm text-gray-500">
-            {Testimonials[currentIndex].title}, {Testimonials[currentIndex].company}
-          </p>
+        <h3 className="text-xl lg:text-lg text-[#222222] dark:text-white">
+          Testimonials
+        </h3>
+        <div className="flex gap-4">
+          <button
+            onClick={prevTestimonial}
+            className="p-1 bg-gray-100 dark:bg-zinc-800 rounded-full shadow-md hover:bg-gray-200 dark:hover:bg-zinc-700"
+          >
+            <ChevronLeft className="text-gray-600 dark:text-white" size={20} />
+          </button>
+
+          <button
+            onClick={nextTestimonial}
+            className="p-1 bg-gray-100 dark:bg-zinc-800 rounded-full shadow-md hover:bg-gray-200 dark:hover:bg-zinc-700"
+          >
+            <ChevronRight className="text-gray-600 dark:text-white" size={20} />
+          </button>
         </div>
-      </motion.div>
+      </motion.header>
 
-      {/* Navigation Buttons */}
-      <button
-        onClick={prevTestimonial}
-        className="absolute top-1/2 left-0 transform -translate-y-1/2 p-2 bg-gray-100 rounded-full shadow-md hover:bg-gray-200"
-      >
-        <ChevronLeft size={20} />
-      </button>
+      <div className="relative">
+        <motion.div
+          key={currentIndex}
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -10 }}
+          transition={{ duration: 0.5 }}
+          className="bg-white dark:bg-zinc-900 shadow-lg rounded-2xl p-6 text-center "
+        >
+          <p className="text-gray-600 mb-4 dark:text-white">
+            "{Testimonials[currentIndex].testimonial}"
+          </p>
+          <div className="flex flex-col items-center">
+            {Testimonials[currentIndex].image && (
+              <img
+                src={Testimonials[currentIndex].image}
+                alt={Testimonials[currentIndex].name}
+                className="w-16 h-16 rounded-full object-cover mb-2"
+              />
+            )}
+            <h4 className="font-semibold text-lg text-gray-500 dark:text-white">{Testimonials[currentIndex].name}</h4>
+            <p className="text-sm text-gray-500 dark:text-white">
+              {Testimonials[currentIndex].title}, {Testimonials[currentIndex].company}
+            </p>
+          </div>
+        </motion.div>
 
-      <button
-        onClick={nextTestimonial}
-        className="absolute top-1/2 right-0 transform -translate-y-1/2 p-2 bg-gray-100 rounded-full shadow-md hover:bg-gray-200"
-      >
-        <ChevronRight size={20} />
-      </button>
+      </div>
     </div>
   );
 };
 
 export default TestimonialComponent;
 
-// import { motion } from "framer-motion";
-// import { useState } from "react";
-
-// const projects = [
-//   {
-//     id: 1,
-//     title: "Résumé.me",
-//     description: "A digital portfolio and résumé builder platform.",
-//     image: "/resume-me.jpg",
-//     testimonial: {
-//       text: "This platform saved me hours! So intuitive and well-designed.",
-//       name: "John Doe",
-//       title: "Senior Developer",
-//       company: "TechCorp",
-//     },
-//   },
-//   {
-//     id: 2,
-//     title: "PGTARIANS",
-//     description: "A learning dashboard platform for students.",
-//     image: "/pgtarians.jpg",
-//     testimonial: {
-//       text: "Amazing user experience. It made communication seamless.",
-//       name: "Jane Smith",
-//       title: "Product Manager",
-//       company: "EduTech",
-//     },
-//   },
-// ];
-
-// export default function ProjectGallery() {
-//   return (
-//     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-//       {projects.map((project) => (
-//         <div key={project.id} className="relative group">
-//           {/* Project Image */}
-//           <img
-//             src={project.image}
-//             alt={project.title}
-//             className="w-full h-64 object-cover rounded-lg shadow-lg"
-//           />
-
-//           {/* Overlay on Hover */}
-//           <motion.div
-//             initial={{ opacity: 0, y: 20 }}
-//             whileHover={{ opacity: 1, y: 0 }}
-//             className="absolute inset-0 bg-black bg-opacity-80 flex flex-col justify-center items-center p-4 text-white rounded-lg opacity-0 group-hover:opacity-100 transition-all duration-300"
-//           >
-//             <p className="text-lg italic">"{project.testimonial.text}"</p>
-//             <p className="mt-2 font-bold">{project.testimonial.name}</p>
-//             <p className="text-sm">{project.testimonial.title}, {project.testimonial.company}</p>
-//           </motion.div>
-//         </div>
-//       ))}
-//     </div>
-//   );
-// }

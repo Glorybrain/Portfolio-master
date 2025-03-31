@@ -295,7 +295,7 @@ export const Testimonials = [
     title: "CTO",
     company: "TechCorp",
     testimonial:
-      "Working with [Your Name] was a fantastic experience. Their attention to detail and problem-solving skills were top-notch.",
+      "Working with Richard was a fantastic experience. Their attention to detail and problem-solving skills were top-notch.",
     image: ProfileImage,
   },
   {
@@ -303,7 +303,7 @@ export const Testimonials = [
     title: "Project Manager",
     company: "InnovateX",
     testimonial:
-      "[Your Name] delivered high-quality code and was an excellent team player. Highly recommend!",
+      "Richard delivered high-quality code and was an excellent team player. Highly recommend!",
     image: ProfileImage,
   },
   {
@@ -312,5 +312,6 @@ export const Testimonials = [
     company: "StartupHub",
     testimonial:
       "They went above and beyond to ensure the project was a success. Would love to collaborate again.",
+    image: ProfileImage,
   },
 ];
