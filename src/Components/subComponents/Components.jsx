@@ -23,16 +23,16 @@ import Sass from "../../assets/media/images/logos--sass.png";
 import ProfileImage from "../../assets/media/images/Adeniyi_Richard_Profile_Image.jpg";
 import NGN from "../../assets/media/images/canada.png";
 
-// import cv from "../../assets/media/documents/OKELEYE_VICTOR_CV.pdf";
 const cv = "https://drive.google.com/file/d/1ADPYetNeQ5vvdH22NLQ-EQML-ETChdWZ/view?usp=sharing";
 
 // project images
-import resumeMe from "../../assets/media/images/resume-me.png";
-import getLinkedAI from "../../assets/media/images/getLinkedAI.png";
+import pawsomeAdopt from "../../assets/media/images/pawsome-adopt.png";
 import pggtarians from "../../assets/media/images/pggtarians.png";
+import projectLoqo from "../../assets/media/images/project-loqo.png";
+import edupath from "../../assets/media/images/edupath.png";
+import lightPolysense from "../../assets/media/images/Light-polysense.png";
 
 // project videos
-import resumeMeV from "../../assets/media/videos/Résumé-me.mp4";
 
 export const IconItem = ({ icon, className }) => {
 	return <Icon icon={icon} className={`${className} flex items-center text-[#222222] dark:text-white`} />;
@@ -64,13 +64,7 @@ export const socialMedia = [
 		linkname: "Twitter/X",
 		icon: "fa6-brands:x-twitter",
 		otherName: "Twitter/X",
-	},
-	// {
-	// 	link: "https://instagram.com/o_vickkk",
-	// 	linkname: "Instagram",
-	// 	icon: "lucide:instagram",
-	// 	otherName: "Instagram",
-	// },
+  },
 ];
 
 export const Links = [
@@ -86,6 +80,12 @@ export const Links = [
 		icon: "ph:read-cv-logo-bold",
 		otherName: "Resume",
 	},
+  {
+    link: "#testimonials",
+    linkname: "Testimonials",
+    icon: "ph:chat-circle-dots",
+    otherName: "Testimonials",
+  },
 ];
 
 export const profileImage = ProfileImage;
@@ -165,113 +165,49 @@ export const MyStacks = [
 
 export const WorkExperiences = [
 	{
-		position: "Frontend Developer",
-		company: "MyZoda",
-		location: "Remote",
-		duration: "Aug 2024 - present",
-		yearDuration: "Aug 2024 - present",
-		description:
-			"MyZODA Limited is a Nigerian tech company offering innovative digital solutions in Health Tech, Agri-Tech, Fin-Tech, Automotive, and more. They focus on user-centric design and scalable applications tailored to the Nigerian market. Notable projects include the Zero6 Alliance Car Rental website. The team, based in Makurdi, Benue, Nigeria, comprises skilled designers, engineers, and strategists.",
-		achievements: [
-			"Independently developed the complete frontend of the website, creating a user-focused interface with optimized performance and responsiveness.",
-			"Implemented comprehensive monitoring tools for frontend performance, enhancing visibility and quick issue resolution.",
-			"Optimized frontend data handling processes, resulting in a 50% improvement in load times and overall user experience.",
-		],
-	},
-	{
-		position: "Software Developer",
-		company: "Cardify Africa",
-		location: "Ibadan, Oyo State (Remote)",
-		duration: "Feb 2022 - present",
-		yearDuration: "SEPT. 2022 - present",
-		description: "Cardify Africa is a financial technology platform catering to users in Africa and the diaspora.",
-		achievements: [
-			"Spearheaded the development of the company's web platform from inception using CDN Vue, Bootstrap, and PHP.",
-			"Developed the complete user frontend interface and integrated RESTful APIs for enhanced functionality.",
-			"Collaborated closely with the CTO to uphold high coding standards and ensure timely project milestones.",
-			"Developed comprehensive monitoring and alerting systems for critical resources.",
-			"Enhanced data migration processes, resulting in over a 30% improvement in query performance.",
-		],
-	},
-	{
-		position: "Frontend Developer (Contract, Remote)",
-		company: "Light.ng",
-		location: "Ibadan, Oyo State",
-		duration: "Apr - July 2023",
-		yearDuration: "Apr. 2023 - 2024",
-		description: "Light.ng enables users to purchase prepaid and postpaid electricity units across Nigeria.",
-		achievements: [
-			"Constructed the company's web platform from scratch using CDN Vue and Bootstrap.",
-			"Implemented RESTful APIs to enhance integration capabilities.",
-			"Worked collaboratively with the CTO to ensure an optimal user experience.",
-		],
-	},
-	{
-		position: "Lead Developer (Contract)",
-		company: "Fair Deal",
-		location: "Lagos State",
-		duration: "Sept - Dec 2023 ",
-		yearDuration: "Sept. - Dec. 2023",
-		description:
-			"Fair Deal is a frontend-heavy web application designed to display user products for sale with direct call-to-action features on WhatsApp.",
-	},
-	{
-		position: "Frontend Engineer (Contract, Remote)",
-		company: "Talemia",
-		duration: "2021 - 2022",
-		yearDuration: "2021 - 2022",
-		description: "Talemia provides tailored solutions for startups aiming for growth.",
-		achievements: ["Developed the complete user frontend interface and integrated RESTful APIs for enhanced functionality."],
-	},
-	{
-		position: "Frontend Developer (Contract)",
-		company: "Dilaac Digital Transfer",
-		duration: "Jan - July 2023",
-		yearDuration: "Jan - July 2023",
-		description: "Dilaac is a fintech company specializing in international transfer solutions.",
-		achievements: ["Developed the frontend for both admin and user dashboards utilizing Vue.js."],
-	},
-	{
-		position: "Software Developer (Contract)",
-		company: "Raoatech IT - Electromech Limited",
-		location: "Yaba, Lagos, Lagos State",
-		duration: "June - July 2022",
-		yearDuration: "2022 - 2023",
-		description: "Raoatech provides an all-inclusive marketplace for digital content and learning.",
-		achievements: [
-			"Developed a bulk SMS platform and integrated third-party APIs into both admin and user dashboards.",
-			"Created a payment management system while optimizing MySQL queries with PHP.",
-		],
-	},
-	{
-		position: "Software Developer, Full-stack",
-		company: "eNetworksVerse",
-		location: "Apo, FCT, Abuja",
-		duration: "Apr 2024 - present",
-		yearDuration: "2024 - present",
-		description: "Responsible for creating both internal and external projects using vanilla PHP and Bootstrap for frontend development.",
-		achievements: ["Developed the complete user frontend interface and enhanced functionality."],
-	},
-	{
-		position: "Coding Tutor",
-		company: "Power X Academy",
-		duration: "Aug 2022 - Dec 2023",
-		yearDuration: "2022 - 2023",
-		description: "PowerX Academy offers global coding training for students.",
-		achievements: ["Educated students from various countries, including the USA, Nigeria, and Ghana in coding fundamentals."],
-	},
+    "position": "Software Developer (Co-op)",
+    "company": "PolySense Solutions Inc.",
+    "location": "Winnipeg, Manitoba, Canada (Remote)",
+    "duration": "June 2024 - Present",
+    "yearDuration": "2024 - Present",
+    "description": "PolySense Solutions Inc. focuses on developing innovative sensor-based technologies.",
+    "achievements": [
+      " Successfully led a project to redesign the company's website from scratch",
+      "focused on enhancing user experience and ensuring compliance with WCAG 2.1 accessibility standards",
+      " My hands-on experience with front end technologies, including HTML5, CSS3, JavaScript, and React, allows me to develop interfaces that are both visually appealing and functionally robust."
+    ]
+  },
+  {
+    "position": "Analyst",
+    "company": "Self-employed",
+    "location": "Remote",
+    "duration": "May 2021 - Present",
+    "yearDuration": "2021 - Present",
+    "description": "Engaged in Foreign Exchange (FX) Trading, Finance, and related analytical tasks.",
+  },
+  {
+    "position": "Project Leader",
+    "company": "Manitoba Institute of Trades and Technology",
+    "location": "Winnipeg, MB",
+    "duration": "May 2024",
+    "yearDuration": "2024",
+    "description": "Led the development of a fictional pet adoption website.",
+    "achievements": [
+      "Successfully led the development of a fictional pet adoption website.",
+      "Designed the front end and worked on back-end integration using APIs alongside SQL Server management.",
+    ]
+  }
 ];
 
 export const PersonalProjects = [
 	{
-		projectTitle: "Résumé.me",
-		projectLink: "https://v-resume-me.netlify.app",
-    imageSrc: resumeMe,
-		videoSrc: resumeMeV,
-		description:
-			"Resumé.me is digital portfolio or résumé builder platform designed help users create a quick resume right off the bat. It provides sections for work experience, skills, projects, and possibly contact information, providing a comprehensive overview of the individual’s qualifications in a visually organized format as well as tips and tricks for the for the resume you are trying to build.",
-		stacks: ["React", "Javascript", "TailwindCSS", "WYSIWYG"],
-	},
+    projectTitle: "Pawsome-adopt",
+    projectLink: "https://pawsome-adopt.netlify.app/",
+    imageSrc: pawsomeAdopt,
+    description: 
+      "A fictional pet adoption website designed to help users find and adopt pets easily. Developed with a focus on front-end design and backend integration, utilizing APIs and SQL Server for data management.",
+    stacks: ["React", "Tailwind CSS", "API", "SQL Server"],
+  },
 	{
 		projectTitle: "PGGTARIANS",
 		projectLink: "https://pggtarians.live/",
@@ -280,13 +216,30 @@ export const PersonalProjects = [
 			"A learning dashboard platform for my fellow coursemates in college and other students purposefully to send automated birthday reminders and messages, practice exam questions and questionnaires as well as have acces to shared materials. It streamlines communication and eliminate repetitive requests for files by allowing students to download course materials and results at any time. Additionally, the dashboard data could be exported for easy form completion and record-keeping.",
 		stacks: ["Javascript", "PHP", "Bootstrap", "HTML", "CSS"],
 	},
-	{
-		projectTitle: "getLinked AI Coding Challenge",
-		projectLink: "https://getlinked-ai-coding-challenge.netlify.app/",
-		imageSrc: getLinkedAI,
-		description: "Participated in an online coding challenge aimed at allowing competitors express their creativity to the best level",
-		stacks: ["React", "Framer Motion", "Headless UI", "Axios", "TailwindCSS"],
-	},
+  {
+    projectTitle: "Project-LOQO",
+    projectLink: "https://theniyirichard.github.io/Project-LOQO/",
+    imageSrc: projectLoqo,
+    description:
+      "A sleek and dynamic car website built with HTML, CSS, and JavaScript. Explore a variety of cars, view specifications, and enjoy interactive features like slideshows and filtering options. Responsive design ensures a seamless experience across devices.",
+    stacks: ["HTML", "CSS", "JavaScript"],
+  },
+  {
+    projectTitle: "Edupath",
+    projectLink: "https://theniyirichard.github.io/Edupath/",
+    imageSrc: edupath,
+    description:
+      "An educational website for selling educative materials. It features a well-designed landing page to attract users. Built using HTML, CSS, JavaScript, and Git.",
+    stacks: ["HTML", "CSS", "JavaScript", "Git"],
+  },
+  {
+    projectTitle: "Light Polysense",
+    projectLink: "https://light-polysense-zip-main.vercel.app/",
+    imageSrc: lightPolysense,
+    description:
+      "An advanced project leveraging modern web technologies to deliver a seamless user experience. Designed for efficiency, scalability, and real-time data interaction.",
+    stacks: ["React", "Next.js", "Tailwind CSS", "API"],
+  }
 ];
 
 export const Testimonials = [
@@ -321,7 +274,7 @@ export const Certificates = [
     title: "Fullstack Web Development",
     issuer: "Coursera",
     date: "March 2025",
-    imageSrc: resumeMe,
+    imageSrc: edupath,
     link: "https://drive.google.com/fullstack-cert",
   },
   {
@@ -335,7 +288,7 @@ export const Certificates = [
     title: "AWS Certified Developer – Associate",
     issuer: "Amazon Web Services",
     date: "January 2025",
-    imageSrc: getLinkedAI,
+    imageSrc: projectLoqo,
     link: "https://drive.google.com/aws-cert",
   },
 ];

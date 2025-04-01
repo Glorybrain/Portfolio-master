@@ -97,6 +97,7 @@ export const BannerComponent = () => {
                   <Link
                     title={social.otherName}
                     to={social.link}
+                    target="_blank"
                     className="text-slate-400 hover:text-slate-50 hover:opacity-100 opacity-80"
                   >
                     <IconItem className="text-[1.25rem]" icon={social.icon} />

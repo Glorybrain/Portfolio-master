@@ -35,7 +35,7 @@ const SideBar = () => {
     <aside className="h-full lg:border-r lg:border-solid flex flex-col gap-y-1 border-r-zinc-300 dark:border-r-zinc-700 bg-[#F2F2F2] dark:bg-custom">
       <div className="px-5 pt-4 flex items-center justify-between">
         <h2 className="text-[#222222] dark:text-white text-2xl font-bold opacity-80 tracking-wide">
-          Richard 
+          Richard
         </h2>
         <button
           type="button"
@@ -49,7 +49,7 @@ const SideBar = () => {
         </button>
       </div>
       <ul className="w-full flex flex-col px-2 mt-3">
-        {[...Links, ...socialMedia].map((eachLink, index) => {
+        {/* {[...Links, ...socialMedia].map((eachLink, index) => {
           const { link, linkname, icon, otherName } = eachLink;
           return (
             <Fragment
@@ -71,7 +71,52 @@ const SideBar = () => {
               </motion.div>
             </Fragment>
           );
+        })} */}
+        {[...Links, ...socialMedia].map((eachLink, index) => {
+          const { link, linkname, icon, otherName } = eachLink;
+
+          // Function to handle smooth scrolling for hash links
+          const handleScroll = (e, link) => {
+            if (link.startsWith("#")) {
+              e.preventDefault();
+              const section = document.querySelector(link);
+              if (section) {
+                section.scrollIntoView({ behavior: "smooth" });
+              }
+            }
+          };
+
+          return (
+            <Fragment key={index}>
+              <motion.div whileHover={linkHoverEffect}>
+                {link.startsWith("#") ? (
+                  <a
+                    href={link}
+                    onClick={(e) => handleScroll(e, link)}
+                    className="flex items-center gap-x-3 text-[#222222] dark:text-white py-3 opacity-70 hover:opacity-95 bg-transparent hover:bg-[#E0E0E0] dark:hover:bg-zinc-900 rounded-md ps-4 text-sm"
+                  >
+                    <i>
+                      <IconItem icon={icon} className={`text-[1.25rem]`} />
+                    </i>
+                    <span className="tracking-wide">{otherName ?? linkname}</span>
+                  </a>
+                ) : (
+                  <Link
+                    to={link}
+                    target={link.toLowerCase() === "/portfolio" ? "_self" : "_blank"}
+                    className="flex items-center gap-x-3 text-[#222222] dark:text-white py-3 opacity-70 hover:opacity-95 bg-transparent hover:bg-[#E0E0E0] dark:hover:bg-zinc-900 rounded-md ps-4 text-sm"
+                  >
+                    <i>
+                      <IconItem icon={icon} className={`text-[1.25rem]`} />
+                    </i>
+                    <span className="tracking-wide">{otherName ?? linkname}</span>
+                  </Link>
+                )}
+              </motion.div>
+            </Fragment>
+          );
         })}
+
       </ul>
     </aside>
   );
