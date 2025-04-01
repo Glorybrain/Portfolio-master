@@ -73,18 +73,18 @@ export const Links = [
 		linkname: "Portfolio",
 		icon: "solar:user-bold",
 		otherName: "Portfolio",
-	},
-	{
-		link: cv,
-		linkname: "Resume",
-		icon: "ph:read-cv-logo-bold",
-		otherName: "Resume",
-	},
+  },
   {
     link: "#testimonials",
     linkname: "Testimonials",
     icon: "ph:chat-circle-dots",
     otherName: "Testimonials",
+  },
+  {
+		link: cv,
+		linkname: "Resume",
+		icon: "ph:read-cv-logo-bold",
+		otherName: "Resume",
   },
 ];
 
