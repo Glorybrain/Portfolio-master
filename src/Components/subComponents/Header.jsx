@@ -16,7 +16,7 @@ const Header = () => {
 
 	return (
 		<div className="items-center justify-between mb-2 flex lg:hidden">
-			<h2 className="text-2xl font-bold text-[#222222] dark:text-white">Vickkk</h2>
+      <h2 className="text-2xl font-bold text-[#222222] dark:text-white">Richard</h2>
 			<button
 				type="button"
 				className="flex items-center justify-center rounded-full p-2 bg-transparent hover:bg-zinc-600/50"

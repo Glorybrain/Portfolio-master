@@ -49,33 +49,9 @@ const SideBar = () => {
         </button>
       </div>
       <ul className="w-full flex flex-col px-2 mt-3">
-        {/* {[...Links, ...socialMedia].map((eachLink, index) => {
-          const { link, linkname, icon, otherName } = eachLink;
-          return (
-            <Fragment
-              key={index}
-            >
-              <motion.div whileHover={linkHoverEffect} >
-                <Link
-                  to={link}
-                  target={
-                    link.toLowerCase() === "/portfolio" ? "_self" : "_blank"
-                  }
-                  className="flex items-center gap-x-3 text-[#222222] dark:text-white  py-3 opacity-70 hover:opacity-95 bg-transparent hover:bg-[#E0E0E0] dark:hover:bg-zinc-900 rounded-md ps-4 text-sm"
-                >
-                  <i>
-                    <IconItem icon={icon} className={`text-[1.25rem]`} />
-                  </i>
-                  <span className="tracking-wide">{otherName ?? linkname}</span>
-                </Link>
-              </motion.div>
-            </Fragment>
-          );
-        })} */}
         {[...Links, ...socialMedia].map((eachLink, index) => {
           const { link, linkname, icon, otherName } = eachLink;
 
-          // Function to handle smooth scrolling for hash links
           const handleScroll = (e, link) => {
             if (link.startsWith("#")) {
               e.preventDefault();
